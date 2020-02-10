@@ -43,6 +43,6 @@
     </table>
 
 
-    <pagination-controls *ngIf="(tweets$ | async)?.length > 5" (pageChange)="p = $event"></pagination-controls>
+    <pagination-controls *ngIf="(tweets$ | async)?.length > 10" (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>
