@@ -11,6 +11,9 @@ import {NgbModule, NgbTabsetModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TextCutPipe } from './pipes/text-cut/text-cut.pipe';
 import { ZeroToCharPipe } from './pipes/zero-to-char/zero-to-char.pipe';
+import { ArrayCutPipe } from './pipes/array-cut/array-cut.pipe';
+import {DatePipe} from '@angular/common';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 
@@ -20,7 +23,8 @@ import { ZeroToCharPipe } from './pipes/zero-to-char/zero-to-char.pipe';
     HashtagSearchComponent,
     UserSearchComponent,
     TextCutPipe,
-    ZeroToCharPipe
+    ZeroToCharPipe,
+    ArrayCutPipe
   ],
   imports: [
     BrowserModule,
@@ -30,9 +34,10 @@ import { ZeroToCharPipe } from './pipes/zero-to-char/zero-to-char.pipe';
     NgbModule,
     NgbTabsetModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

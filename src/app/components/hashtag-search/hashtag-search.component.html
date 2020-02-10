@@ -17,6 +17,7 @@
   </div>
 </form>
 
+
 <table class="table table-striped">
   <thead>
   <tr>
@@ -29,7 +30,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let tweet of datacource | async">
+  <tr *ngFor=" let tweet of datacource$ | async | paginate: { itemsPerPage: 5, currentPage: p }">
     <td>
       <ngb-highlight [result]="tweet.text | textCut"></ngb-highlight>
     </td>
@@ -43,11 +44,14 @@
       <ngb-highlight [result]="tweet.retweets | zeroToChar"></ngb-highlight>
     </td>
     <td>
-      <ngb-highlight [result]="tweet.hashtags"></ngb-highlight>
+      <ngb-highlight [result]="tweet.hashtags | arrayCut"></ngb-highlight>
     </td>
     <td>
-      <ngb-highlight [result]="tweet.date | date"></ngb-highlight>
+      <ngb-highlight [result]="tweet.date | date: 'MMM d, y'"></ngb-highlight>
     </td>
   </tr>
   </tbody>
 </table>
+
+
+<pagination-controls *ngIf="(tweets$ | async)?.length > 5" (pageChange)="p = $event"></pagination-controls>
