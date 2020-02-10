@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import 'rxjs-compat/add/operator/map';
+import {environment} from '../../environments/environment';
 // import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -17,8 +18,8 @@ export class DataWrapperService {
   constructor(private http: HttpClient) {
   }
 
-  getByHashtag(): Observable<any> {
-    return this.http.get<any>('https://anymind-recruitment-python-backend.adasia.biz/hashtags/Python?offset=0',
+  getData(serviceUrl: string): Observable<any> {
+    return this.http.get<any>(environment.api.base + serviceUrl,
       {headers: this.headers});
   }
 }
