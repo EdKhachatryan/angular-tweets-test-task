@@ -1,0 +1,29 @@
+/*
+.title-block {
+  margin: 15px;
+  padding: 15px;
+  text-align: left;
+}
+*/
+
+
+.custom-tab {
+  padding-left: 50px !important;
+}
+
+
+.nav {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 50px !important;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+
+.nav-tabs .nav-link {
+  border: 1px solid transparent;
+  border-top-left-radius: 0!important;
+  border-top-right-radius: 0!important;
+}

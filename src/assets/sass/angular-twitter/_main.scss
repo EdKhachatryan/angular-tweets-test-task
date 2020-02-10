@@ -1,0 +1,90 @@
+.title-block {
+  margin: 15px 30px;
+  padding:  0;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.custom-tab {
+  padding-left: 30px !important;
+}
+
+.page-main-container {
+  height: 100%;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: inherit;
+  background-color: $background-gray;
+}
+
+.search-block {
+  padding: 15px 30px;
+}
+
+.search-title {
+  color: $font-gray;
+  font-weight: 300;
+  padding: 5px 0;
+}
+
+.search-block > input::placeholder {
+  color: $font-gray;
+  opacity: 0.9;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 200;
+  vertical-align: middle;
+  position: relative;
+}
+
+.custom-card {
+  margin: 15px 30px 50px 30px;
+  padding: 20px;
+  border: 0;
+
+}
+/*overwrite ngb styles*/
+
+.nav {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px !important;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link.active {
+  color: $font-lasure !important; //#495057;
+  background-color: $background-gray !important;//#fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+  font-weight: 400;
+}
+
+.nav-tabs .nav-link {
+  color: black ;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.nav-item {
+  border-radius: 0 !important;
+}
+
+.ml-2, .mx-2 {
+  margin-left: 0!important;
+}
+
+
+/*overwrite paginator styles*/
+
+.ngx-pagination {
+  padding: 0 !important;
+}
+
+.ngx-pagination .current {
+  background-color: $font-lasure;
+}
